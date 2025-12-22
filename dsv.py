@@ -116,7 +116,22 @@ def setconf():
 
 def main():
     sys_c_t()
-    os.system(f"title {__version__} - Connected as {requests.get(sys_url,headers=s_sys_h()).json()['username']}")
+    import os
+import requests
+
+# 1. Fetch the data safely
+try:
+    response = requests.get(sys_url, headers=s_sys_h())
+    response.raise_for_status() # Check for HTTP errors
+    data = response.json()
+    username = data.get('username', 'Unknown User')
+except Exception as e:
+    username = "Error Fetching User"
+    print(f"Request failed: {e}")
+
+# 2. Set the title (Windows)
+# We wrap the string in double quotes to handle spaces in the username
+os.system(f'title {__version__} - Connected as "{username}"')
     s_sys_h()
     setconf()    
     print(f"""{Fore.LIGHTYELLOW_EX}
