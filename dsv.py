@@ -278,8 +278,8 @@ def ch_send_webhook(val0:str):
         "text": "github.com/suenerve/Discord-Username-Checker"
       },
       "author": {
-        "name": "DSV - Username Found",
-        "url": "https://github.com/suenerve/Discord-Username-Checker",
+        "name": "Fuad - Username Found",
+        "url": "by xnxx.com",
         "icon_url": "https://cdn-icons-png.flaticon.com/512/5290/5290982.png"
       },
       "thumbnail": {
