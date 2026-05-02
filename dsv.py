@@ -13,7 +13,7 @@ init(autoreset=True)
 
 # Configuration & Globals
 __version__ = "Author: suenerve DSV 1.9"
-__github__= "https://github.com/suenerve"
+__github__= "https://github.com/shexfuad404"
 dir_path = os.path.dirname(os.path.realpath(__file__))
 configur = ConfigParser()
 configur.read(os.path.join(dir_path, "config.ini"))
